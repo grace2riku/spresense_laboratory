@@ -1,0 +1,25 @@
+
+config SPRESENSE_LAB_STDIO_TEST
+	tristate "“stdio_test”"
+	default y
+	---help---
+		Enable the stdio_test app
+
+if SPRESENSE_LAB_STDIO_TEST
+
+config SPRESENSE_LAB_STDIO_TEST_PROGNAME
+	string "Program name"
+	default "stdio_test"
+	---help---
+		This is the name of the program that will be use when the NSH ELF
+		program is installed.
+
+config SPRESENSE_LAB_STDIO_TEST_PRIORITY
+	int "stdio_test task priority"
+	default 100
+
+config SPRESENSE_LAB_STDIO_TEST_STACKSIZE
+	int "stdio_test stack size"
+	default 2048
+
+endif

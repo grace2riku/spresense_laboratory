@@ -1,0 +1,4 @@
+
+ifneq ($(CONFIG_SPRESENSE_LAB_STDIO_TEST),)
+CONFIGURED_APPS += stdio_test
+endif
